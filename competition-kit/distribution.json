@@ -1,0 +1,21 @@
+{
+  "name": "xumx-baseline-public",
+  "version": "2026-09-27",
+  "files": {
+    "ensemble_benchmark/__init__.py": "1778c688feef6c7495aeded6d14b0b660b9fb7a2c2b6517a942274e40d646f31",
+    "ensemble_benchmark/baseline.py": "ff8b551ab1c7770253835e6aac5494f5f0f6a4adbc4710796ee27632984ad3ff",
+    "ensemble_benchmark/runtime.py": "4bb9d994824664e46dcd931bd9e8054524b51cf39a85719637bdbe28c6145807",
+    "ensemble_benchmark/losses.py": "d0d7f55c8e9e0e8c9428fa722bcdf9d8a6e735280e65462dbbdddc15fdf06c6c",
+    "ensemble_benchmark/local_data.py": "636fe6f9fc66b2406880afd1c90d4c064974ff439809360a0948d8a29c52b65c",
+    "ensemble_benchmark/evaluation_metrics.py": "aabfafb9af2d7250f5e1f0f111fc13cb35012093fefb8580bd1e038f0afcf4de",
+    "ensemble_benchmark/scoring.py": "1c3a3b2e10b55ce61267edfa9953f6c993391bd58c9e9f5714d27e42f2dc794c",
+    "ensemble_benchmark/export.py": "3915b7462556d557d7543afb7c0caf40e5a9b633dcbdb72b8ef4578543715a42",
+    "ensemble_benchmark/vendor/LICENSE.asteroid": "c12aebc7a4eeeec2e482414004fd5d68275d7608552031cd48f4088b403f902d",
+    "ensemble_benchmark/vendor/x_umx.py": "7b5c14ae3f24b22e13c04f1f3fd757c96d6a39cfdcf80e13237ec4e6a36022e0",
+    "ensemble_benchmark/vendor/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "LICENSE": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+    "requirements.txt": "e235beef2e94d7cc2263697123d698f704cf23523ec692abbf7d80cb3b437284",
+    "manifests/selection.json": "7013583640545102ee4cc5cd2234b25a6c0abedd6f4651a5c10f74e66930042b",
+    "README.md": "824d205cfb5f98f2365822be82fcd9d9d155955088d51d016feac543b61da634"
+  }
+}
