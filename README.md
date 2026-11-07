@@ -46,6 +46,8 @@
 
 BSS Eval v4로 SDR·SIR·SAR를 계산합니다. 점수가 높을수록 좋습니다. 순위 기준은 `SynthSOD SDR × 0.5 + URMP SDR × 0.5`입니다. 프레임 → 부모 녹음 → 작품 → 악기 순으로 집계하며 상세 구현은 `competition-kit/ensemble_benchmark/scoring.py`와 `evaluation_metrics.py`에 있습니다.
 
+리더보드에는 SCISSOR audio-only 개선판(종합 SDR **3.584 dB**, SynthSOD 5.776 · URMP 1.391, 학습 20,000회)과 Tunturi X-UMX noscore(종합 SDR **1.854 dB**, SynthSOD 3.148 · URMP 0.559, 약 4시간 · 7,536회)를 추가했습니다. 두 실험의 점수와 학습량은 제공된 비교표를 기준으로 하며, 종합 SDR은 반올림된 데이터셋별 값으로 재계산하지 않고 제공값을 유지합니다.
+
 X-UMX baseline의 전체 validation SDR은 **1.469 dB**입니다. 제공된 sam-audio-large SDR은 **−1.8256 dB**이며, 평가 범위와 집계 방식이 확인되지 않아 리더보드 순위는 잠정적입니다. SIR·SAR 종합값은 기록되지 않았습니다. 다른 실험은 별도 `ENSEMBLE_RUN`으로 실행하고 같은 데이터·채점 방법을 사용하세요.
 
 코드 라이선스와 원본 모델 출처는 `competition-kit/LICENSE`, `competition-kit/README.md`, `competition-kit/ensemble_benchmark/vendor/LICENSE.asteroid`를 유지합니다. 데이터 라이선스는 `DATASET.md`를 따릅니다.
