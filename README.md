@@ -46,6 +46,8 @@
 
 BSS Eval v4로 SDR·SIR·SAR를 계산합니다. 점수가 높을수록 좋습니다. 순위 기준은 `SynthSOD SDR × 0.5 + URMP SDR × 0.5`입니다. 프레임 → 부모 녹음 → 작품 → 악기 순으로 집계하며 상세 구현은 `competition-kit/ensemble_benchmark/scoring.py`와 `evaluation_metrics.py`에 있습니다.
 
+SCISSOR + Tunturi 앙상블 결과로 악기별 모델 선택(종합 SDR **4.065 dB**, SynthSOD 6.851 · URMP 1.279)과 두 모델 출력 평균(종합 SDR **3.626 dB**, SynthSOD 5.858 · URMP 1.395)을 표시합니다. 악기별 모델 선택은 같은 validation에서 모델 선택과 평가를 수행한 개발용 결과이며, 음원 평균과 달리 악기마다 모델 하나를 고릅니다. 두 방법 모두 기존 모델을 활용합니다.
+
 리더보드에는 SCISSOR audio-only 재조합 추가(종합 SDR **4.046 dB**, SynthSOD 6.893 · URMP 1.199, 20,000회), SCISSOR 개선판(종합 SDR **3.584 dB**, SynthSOD 5.776 · URMP 1.391, 20,000회), 이어 학습한 Tunturi X-UMX(종합 SDR **2.534 dB**, SynthSOD 4.296 · URMP 0.772, 누적 28,579회 · 추가 약 12시간)를 표시합니다. SCISSOR는 논문 기반 audio-only 재구현이며 재조합 버전은 기존 개선판과 같은 설정으로 처음부터 학습하되 허용된 train 내에서 배치별 악기 트랙 재조합을 추가했습니다. Tunturi는 7,536회 체크포인트의 모델·옵티마이저·난수·혼합정밀도 상태를 이어받고 학습률 스케줄을 초기화했으며 학습률 감소와 조기 종료 정책을 변경했습니다. 12시간 예산에 도달해 종료했습니다. 종합 SDR은 반올림된 데이터셋별 값으로 재계산하지 않고 제공값을 유지합니다.
 
 X-UMX baseline의 전체 validation SDR은 **1.469 dB**입니다. 제공된 sam-audio-large SDR은 **−1.8256 dB**이며, 평가 범위·집계 방식과 실행 산출물이 확인되지 않아 순위 비교는 잠정적입니다. SIR·SAR 종합값은 기록되지 않았습니다. 다른 실험은 별도 `ENSEMBLE_RUN`으로 실행하고 같은 데이터·채점 방법을 사용하세요.
